@@ -1,0 +1,267 @@
+﻿<div id="esq_RequestFrom" kendo-validator="formValidator" k-options="formValidationRules">
+    <div class="esq_FormHeader" style="margin-bottom:12px;">
+        <div class="esq_headerTr">
+            <div>
+                <span bind-lang="Ref" class="esq_RequestRef" style="display:none;width:112px;">Ref:</span>
+                <span id="RequestRef" class="esq_RequestRef" style="display:none;width:189px;">
+                    <!--Ref: eel742016000005-->
+                </span>
+                <span bind-lang="Status" class="esq_Status" style="width:116px;">Status:</span>
+                <span id="RequestStatus" class="esq_Status" style="">
+                </span>
+                <input type="hidden" id="txtItemId" />
+                <input type="hidden" id="txtDetailItemId" />
+                <input type="hidden" id="txtIsHotel" />
+                <input type="hidden" id="txtShowRemark" />
+                <input type="hidden" id="txtShowOtherHotels" />
+                <input type="hidden" id="txtShowSmokingFlag" />
+            </div>
+        </div>
+        <div class="esq_headerTr">
+            <div><span style="width:116px;"><span bind-lang="Requestor" bind-tips="RequestorInfo" class="esq_span_tips">Requestor</span><span style="color:red;">*</span></span><input id="txtRequestor" style="width:177px" value="{{hotelRequestForm.requestor}}" readonly="readonly" /></div>
+            <div><span style="width:120px;"><span bind-lang="Department">Department</span><span style="color:red;">*</span></span><input id="txtDepartment" style="width:156px" value="{{hotelRequestForm.department}}" readonly="readonly" /></div>
+            <div><span style="width:140px;"><span bind-lang="BookingPurpose" bind-tips="BookingPurposeInfo" class="esq_span_tips">Booking Purpose</span><span style="color:red;">*</span></span><select id="ddlBookingPurpose" kendo-drop-down-list k-options="ddlPurposeDB" ng-model="hotelRequestForm.purpose"></select></div>
+            <div class="esq_clearFloat" style="float:none"></div>
+        </div>
+        <div class="esq_headerTr">
+            <div><span style="width:116px;"><span bind-lang="Destination">Destination</span><span style="color:red;">*</span></span><select id="ddlDestination" name="destionation" style='width:184px' kendo-drop-down-list k-options="ddlDestinationDB" ng-model="hotelRequestForm.destination" required></select></div>
+            <div><span style="width:120px;"><span bind-lang="Checkin" bind-tips="CheckinInfo" class="esq_span_tips">Check in</span><span style="color:red;">*</span></span><input id="txtCheckin" ng-model="hotelRequestForm.checkIn" /></div>
+            <div><span style="width:140px;"><span bind-lang="Checkout" bind-tips="CheckoutInfo" class="esq_span_tips">Check out</span><span style="color:red;">*</span></span><input id="txtCheckout" ng-model="hotelRequestForm.checkOut" /></div>
+            <div class="esq_clearFloat" style="float:none"></div>
+        </div>
+    </div>
+    <div class="esq_dormHotel" style="display:none;">
+    </div>
+    <div class="esq_staff" style="display:none;">
+        <div id="esq_StaffAndGuestHeader">
+            <div>
+                <div class="esq_staff_Rooms_Span"><span class="esq_Room_Hotel" bind-lang="Rooms">Rooms </span></div>
+                <div class="esq_btnAddRoom_Div"><input id="btnAddRoom" style="min-width:30px;padding:2px;" type="button" value="+" onclick="AddRoom()" /></div>
+            </div>
+            <div>
+                <h2 style="font-weight:bold;" bind-lang="StaffGuest" bind-tips="CheckinInformationInfo" class="esq_span_tips">Checkin Information</h2>
+            </div>
+        </div>
+        <div id="dvStaffAndGuest">
+        </div>
+    </div>
+    <div class="esq_HotelBody" style="display:none;">
+        <div class="esq_SelectHotelSpan">
+            <h2 bind-lang="SelectHotel">Select Hotel</h2>
+        </div>
+        <div class="esq_selectHoteldiv">
+            <div>
+                <div id="tabstripHotel">
+                </div>
+            </div>
+            <div class="esq_SelectHotel">
+                <div class="esq_SelectHotelPreference"><span bind-lang="Preference1">Preference 1</span><label style="color:red">*</label></div>
+                <div><select id="ddlPreference1" kendo-drop-down-list k-options="ddlHotelList" ng-model="hotelRequestForm.preference1"></select></div>
+                <div class="esq_SelectHotelRadio"><input type="radio" name="preferenceRadio" value="1" style="display:none"></div>
+                <div class="esq_SelectHotelPreference"><span bind-lang="Preference2">Preference 2</span><label style="color:red">*</label></div>
+                <div><select id="ddlPreference2" kendo-drop-down-list k-options="ddlHotelList" ng-model="hotelRequestForm.preference2"></select></div>
+                <div class="esq_SelectHotelRadio"><input type="radio" name="preferenceRadio" value="2" style="display:none"></div>
+                <div class="esq_SelectHotelPreference"><span bind-lang="Preference3">Preference 3</span><label style="color:red">*</label></div>
+                <div><select id="ddlPreference3" kendo-drop-down-list k-options="ddlHotelList" ng-model="hotelRequestForm.preference3"></select></div>
+                <div class="esq_SelectHotelRadio" style="padding-right:0px;"><input type="radio" name="preferenceRadio" value="3" style="display:none"></div>
+                <div class="esq_span_tips" bind-tips="HotelInfo">&nbsp;&nbsp;</div>
+                <!--<div><input type="checkbox" id="ckbOtherHotel"><label for="ckbOtherHotel" bind-lang="SelectOtherHotels">Select other hotels</label></div>-->
+            </div>
+            <div id="emailHotel" style="display:none;" class="esq_adminDiv">
+                <div id="emailHotel1"><a id="btnAdminEmail1" kendo-button ng-click="onEmail1('#ddlPreference1')" bind-lang="Email Hotel1">Email Hotel1</a></div>
+                <div id="emailHotel2"><a id="btnAdminEmail2" kendo-button ng-click="onEmail1('#ddlPreference2')" bind-lang="Email Hotel2">Email Hotel2</a></div>
+                <div id="emailHotel3"><a id="btnAdminEmail3" kendo-button ng-click="onEmail1('#ddlPreference3')" bind-lang="Email Hotel3">Email Hotel3</a></div>
+            </div>
+            <div id="autoHotelEmailSubject" style="display:none"><span id="urgentMes"></span>Room Reservation Request-<span id="checkInSubject"></span> to <span id="checkOutSubject"></span>-<span id="requestNumSubject"></span>-<span id="NoOfRoomsSubject"></span> Room<span id="sSubject"></span></div>
+            <div id="autoHotelEmailBody" style="display:none"><span>Dear <span id="HName"></span>,%0D%0A %0D%0APlease book rooms per below, %0D%0ARooms: <span id="NoOfRooms"></span>%0D%0A%0D%0A</span><span id="guestTable"></span></div>
+
+            <div class="esq_OtherHotelButton">
+                 <span bind-lang="EnterOtherHotelLabel">Enter other hotels that aren't on this list </span>
+                 <input bind-lang="EnterOtherHotel" id="btnSelectOtherHotels" type="button" value="Enter other hotel" />
+            </div>
+        </div>    
+        <div id="esq_EnterOtherHotel" style="display: none;">
+            <div>
+                <span class="esq_EnterOtherHotel_span" bind-lang="EnterOtherHotel">Enter Other Hotel  </span><input type="button" bind-lang="ReturnHotelSelection" value="Return to hotel selection" id="btnReturnSelection" />
+            </div>
+            <div style="margin:10px 0;">
+                <span bind-lang="EnterOtherHotelDesc">Please note - Room availability for other hotels aren't guaranteed and an email will be sent to selected manager.</span>
+            </div>
+            <div class="esq_OtherHotelRow">
+                <div style="width:80px;"><span bind-lang="HotelName">Hotel Name</span><span style="color:red;">*</span></div>
+                <div style="width:220px;"><input style="width:200px" id="txtOtherHotelName" /></div>
+                <div style="width:110px;"><span bind-lang="ContactNumber">Contact Number</span><span style="color:red;">*</span></div>
+                <div style="width:220px;"><input style="width:200px" id="txtOtherHotelContactNumber" /></div>
+            </div>
+            <div class="esq_OtherHotelRow" style="height:60px;">
+                <div style="width:80px;"><span bind-lang="Address">Address</span><span style="color:red;">*</span></div>
+                <div style="width:550px;">
+                    <textarea rows="3" id="txtOtherHotelAddress" style="width:522px"></textarea>
+                </div>
+            </div>
+            <div style="margin:10px 0;">
+                <span bind-lang="AnotherHotelClarify">
+                    Please clarify the purpose of selecting another hotel
+                </span>
+            </div>
+            <div class="esq_OtherHotelRow" style="height:60px;">
+                <div style="width:80px;"><span bind-lang="Remarks">Remarks</span><span style="color:red">*</span></div>
+                <div style="width:220px;">
+                    <textarea rows="3" style="width:193px;" id="txtOtherHotelRemakrs"></textarea>
+                </div>
+                <div style="width:110px;">
+                    <span bind-lang="ManagersName">Managers Name</span><span style="color:red">*</span>
+                </div>
+                <div style="width:220px;">
+                    <div id="peoplePickerManagersName"></div>
+                </div>
+            </div>
+            <div class="esq_OtherHotelRow" style="height:30px;">
+                <div style="width:80px;">
+                    <span bind-lang="Hotel Email">Hotel Email</span><span style="color:red">*</span>
+                </div>
+                <div style="width:330px;"><input id="txtOtherHotelEmail" style="width:200px" /></div>
+                <div style="width:110px;display:none;" class="esq_adminDiv"><a id="btnAdminOtherHotelEmail" kendo-button ng-click="onEmail4()" bind-lang="Email Hotel">Email Hotel</a></div>
+            </div>
+        </div>
+    </div>
+    <div style="display:none;" class="esq_adminRemarks">
+        <div style="width:440px;float:left;">
+            <span bind-lang="AdminRemarks">Admin Remarks</span>
+            <textarea id="txtAdminRemarks2" readonly="readonly" style="width:420px; height:80px;"></textarea>
+        </div>
+        <div style="width:430px;float:left;" class="esq_adminCCManager">
+            <span bind-lang="CCManager">CC Manager</span>
+            <div id="txtCCManager2"></div>
+        </div>
+        <div style="clear:left;"></div>
+        <div id="dFileMessage2" style="font-family: Calibri"></div>
+    </div>
+    <div style="display:none;" class="esq_adminDiv">
+        <div style="width:440px;float:left;">
+            <span bind-lang="AdminRemarks">Admin Remarks</span>
+            <textarea id="txtAdminRemarks" style="width:420px; height:80px;"></textarea>
+        </div>
+        <div style="width:430px;float:left;" class="esq_adminCCManager">
+            <span bind-lang="CCManager">CC Manager</span>
+            <div id="txtCCManager"></div>
+
+        </div>
+        <div style="clear:left;"></div>
+        <div class="esq_ConfirmationEmail_th">
+            <span bind-lang="ConfirmationEmail">
+                Confirmation Email
+            </span>
+        </div>
+        <div class="esq_ConfirmationEmail">
+        </div>
+        <div>
+            <input type="file" id="emailFile" /><a kendo-button ng-click="onUploadFile()" style="margin-left:10px;" bind-lang="Upload">Upload</a><a kendo-button ng-click="onClearFile()" style="margin-left:10px;" bind-lang="Clear">Clear</a>
+            <div id="dFileMessage" style="font-family: Calibri"></div>
+        </div>
+        <div class="esq_adminFoot">
+            <a id="btnAdminUpdate" kendo-button ng-click="onSubmit()" bind-lang="Update">Update</a>
+            <a id="btnBookedSend" kendo-button ng-click="onBookedSend()" bind-lang="BookedAndSend">Booked and Send</a>
+            <a id="btnAdminCancelBooking" kendo-button ng-click="onCancel()" bind-lang="CancelBooking">Cancel Booking</a>
+            <a id="btnAdminCloseRequest" kendo-button ng-click="onClose()" bind-lang="Close">Close</a>
+            <a id="CopyRequest2" kendo-button ng-click="onCopy()" bind-lang="Copy" style="display:none;">Copy</a>
+        </div>
+    </div>
+    <div class="esq_FormFoot" style="display:none;">
+        <a id="SubmitRequest" kendo-button ng-click="onSubmit()" bind-lang="Submit">Submit</a>
+        <a id="SaveRequest" kendo-button ng-click="onSave()" bind-lang="Save">Save</a>
+        <a id="CloseRequest" kendo-button ng-click="onClose()" bind-lang="Close">Close</a>
+        <a id="CancelRequest" kendo-button ng-click="onCancel()" bind-lang="CancelBooking" style="display:none">Cancel Booking</a>
+        <a id="CopyRequest" kendo-button ng-click="onCopy()" bind-lang="Copy" style="display:none;">Copy</a>
+    </div>
+    <a id="CopyRequest3" kendo-button ng-click="onCopy()" bind-lang="Copy" style="display:none;">Copy</a>
+    <div id="urgentDiv" style="display:none">
+        <p id="urgentAlertHtml">
+            please note your check-in time is within ## hours of the current booking time.<br />
+            please mark this as urgent booking and explain the reason for this at the bottom of the form.
+        </p>
+        <div style="text-align:center">
+            <a id="changeTime" style="display:none;" kendo-button ng-click="onChangeTime()" bind-lang="ChangeCheckinTime">Change check-in time</a>
+            <a id="markUrgent" kendo-button ng-click="onMarkUrgent()" bind-lang="MarkUrgent">Mark this as urgent</a>
+        </div>
+    </div>
+    <div id="urgentFormDiv" style="display:none">
+        <div>
+            <div>
+                <span bind-lang="UrgentManagersName">Your Manager's Name</span><span style="color:red;">*</span>
+            </div>
+            <div style="margin-top:10px;">
+                <div id="peoplePickerUrgentManagersName"></div>
+            </div>
+        </div>
+        <div>
+            <div style="margin-top:20px;">
+                <span bind-lang="UrgentRemarks">Reason for urgent booking</span><span style="color:red;">*</span>
+            </div>
+            <div style="margin-top:10px;">
+                <textarea id="txtUrgentRmarks" style="width:500px; height:50px;"></textarea>
+            </div>
+        </div>
+        <div style="margin-top:20px;text-align:center;">
+            <a id="urgentSubmit" kendo-button ng-click="onUrgentSubmit()" bind-lang="UrgentSubmit">Urgent Submit</a>
+            <a id="urgentFormCancel" kendo-button ng-click="onUrgentFormCancel()" bind-lang="Cancel">Cancel</a>
+        </div>
+    </div>
+    <div id="urgentCancelDiv" style="display:none">
+        <p id="urgentCancelAlertHtml">
+            please note your check-in time is within 24 hours of the current booking time.<br />
+            please change check-in time or mark this as urgent booking and explain the reason for this at the bottom of the form.
+        </p>
+        <div style="text-align:center">
+            <a id="changeTimeCancel" kendo-button ng-click="onChangeTimeCancel()" bind-lang="Cancel">Cancel</a>
+            <a id="markUrgentCancel" kendo-button ng-click="onMarkUrgentCancel()" bind-lang="MarkUrgent">Mark this as urgent</a>
+        </div>
+    </div>
+    <div id="urgentCancelFormDiv" style="display:none">
+        <div>
+            <div>
+                <span bind-lang="UrgentManagersName">Managers Name</span><span style="color:red;">*</span>
+            </div>
+            <div style="margin-top:10px;">
+                <div id="peoplePickerUrgentCancelManagersName"></div>
+            </div>
+        </div>
+        <div>
+            <div style="margin-top:20px;">
+                <span bind-lang="UrgentCancelRemarks">Rmarks</span><span style="color:red;">*</span>
+            </div>
+            <div style="margin-top:10px;">
+                <textarea id="txtUrgentCancelRmarks" style="width:500px; height:50px;"></textarea>
+            </div>
+        </div>
+        <div style="margin-top:20px;text-align:center;">
+            <a id="urgentCancelSubmit" kendo-button ng-click="onUrgentCancelSubmit()" bind-lang="UrgentCancelButton">Urgent Cancel</a>
+            <a id="urgentCancelFormCancel" kendo-button ng-click="onUrgentCancelFormCancel()" bind-lang="Cancel">Cancel</a>
+        </div>
+    </div>
+    <div id="esq_dialog" style="display:none;">
+        <!--<div class="esq_dialog_img"><img src="https://esquel.sharepoint.com/sites/ead/SiteAssets/hbs/Default/succeed.png" /></div>-->
+        <div class="esq_dialog_msg"></div>
+        <div class="esq_dialog_btn">
+            <a id="esq_dialog_close" kendo-button ng-click="onCloseDialog()">OK</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var btnSelectOtherHotels = $("#btnSelectOtherHotels");
+
+        btnSelectOtherHotels.click(function () {
+            $('.esq_selectHoteldiv').hide();
+            $('.esq_SelectHotelSpan').hide();
+            $('#esq_EnterOtherHotel').show();
+        });
+
+        $('#btnReturnSelection').click(function () {
+            $('.esq_selectHoteldiv').show();
+            $('.esq_SelectHotelSpan').show();
+            $('#esq_EnterOtherHotel').hide();
+        });
+
+    });
+</script>

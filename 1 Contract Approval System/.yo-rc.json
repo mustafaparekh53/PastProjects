@@ -1,0 +1,12 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.6.0",
+    "libraryName": "contract-approval-system",
+    "libraryId": "642a453d-2040-4206-ab92-e03adb058a1d",
+    "environment": "spo",
+    "isCreatingSolution": true,
+    "packageManager": "npm",
+    "componentType": "webpart"
+  },
+  "generator-react-webpack": {}
+}

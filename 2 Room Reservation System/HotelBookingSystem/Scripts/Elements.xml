@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.map" Url="Scripts/jquery-1.9.1.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.js" Url="Scripts/jquery-1.9.1.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.intellisense.js" Url="Scripts/jquery-1.9.1.intellisense.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\kendo.all.min.js" Url="Scripts/kendo.all.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js" Url="Scripts/angular.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Booking.js" Url="Scripts/Booking.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Default.js" Url="Scripts/Default.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js.map" Url="Scripts/angular.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.js" Url="Scripts/angular.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\version.json" Url="Scripts/version.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\errors.json" Url="Scripts/errors.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js.map" Url="Scripts/angular-route.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js" Url="Scripts/angular-route.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.js" Url="Scripts/angular-route.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\app.controller.js" Url="Scripts/App/components/app.controller.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\app.module.js" Url="Scripts/App/components/app.module.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\app.route.js" Url="Scripts/App/components/app.route.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\adminPage\adminPage.html" Url="Scripts/App/components/adminPage/adminPage.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\adminPage\adminPageCtrl.js" Url="Scripts/App/components/adminPage/adminPageCtrl.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\hotelRequestForm\hotelRequestFormCtrl.js" Url="Scripts/App/components/hotelRequestForm/hotelRequestFormCtrl.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\hotelRequestForm\hotelRequestFormSvc.js" Url="Scripts/App/components/hotelRequestForm/hotelRequestFormSvc.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\hotelRequestForm\hotelRequestFrom.html" Url="Scripts/App/components/hotelRequestForm/hotelRequestFrom.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\reportPage\reportPage.html" Url="Scripts/App/components/reportPage/reportPage.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\reportPage\reportPageCtrl.js" Url="Scripts/App/components/reportPage/reportPageCtrl.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\shared\base.service.js" Url="Scripts/App/shared/base.service.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\app.service.js" Url="Scripts/App/components/app.service.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\shared\HBSLang.js" Url="Scripts/App/shared/HBSLang.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\shared\requestCSR.js" Url="Scripts/App/shared/requestCSR.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\shared\esq.peoplepicker.js" Url="Scripts/App/shared/esq.peoplepicker.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\dormLandingPage\dormLandingPage.html" Url="Scripts/App/components/dormLandingPage/dormLandingPage.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\dormLandingPage\dormLandingPageCtrl.js" Url="Scripts/App/components/dormLandingPage/dormLandingPageCtrl.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\components\dormLandingPage\dormLandingPageSrv.js" Url="Scripts/App/components/dormLandingPage/dormLandingPageSrv.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\underscore-min.js" Url="Scripts/underscore-min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\shared\jsUpLoad.js" Url="Scripts/App/shared/jsUpLoad.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\shared\date.js" Url="Scripts/App/shared/date.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.js" Url="Scripts/jquery-1.9.1.min.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

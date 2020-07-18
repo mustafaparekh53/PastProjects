@@ -1,0 +1,30 @@
+{
+  "name": "marketing",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.13.0"
+  },
+  "description": "Visualising JETS Application Data",
+  "main": "app.js",
+  "scripts": {
+    "pre-run": "install-changed",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Ibrahim Shabbir",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.372.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "csvtojson": "^2.0.8",
+    "dotenv": "^7.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "helmet": "^3.21.2",
+    "mongoose": "5.4.21",
+    "password-hash": "^1.2.2",
+    "request": "^2.88.0",
+    "socket.io": "^2.1.1"
+  }
+}

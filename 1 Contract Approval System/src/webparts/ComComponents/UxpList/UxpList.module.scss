@@ -1,0 +1,13 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+.uxpList {
+  .detailsList {
+    min-height: 400px; //overflow-y: auto;
+  }
+}
+
+:global {
+  .ms-SelectionZone .ms-List {
+    max-height: 430px;
+    overflow: auto;
+  }
+}

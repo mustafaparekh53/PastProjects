@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="d1529748-b410-4ed9-96a3-60c98b29bb36" 
+        solutionId="d1529748-b410-4ed9-96a3-60c98b29bb36" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="HotelBookingSystem"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="c91176f2-ce55-4391-be74-132865e24d52" />
+  </features>
+</package>

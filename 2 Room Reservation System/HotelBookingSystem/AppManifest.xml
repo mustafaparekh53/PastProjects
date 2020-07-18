@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<!--DEV App Name:RoomReservationSystemDEV
+DEV Title:Room Reservation System(DEV)
+DEV  ProductID:19b3d233-1ba1-4abf-958f-588b057bcea3-->
+
+<!--SIT App Name:RoomReservationSystemSIT
+SIT Title:Room Reservation System(SIT)
+SIT  ProductID:19b3d233-1ba1-4abf-958f-588b057bcea4-->
+
+<!--UAT App Name:RoomReservationSystemUAT
+UAT Title:Room Reservation System(UAT)
+UAT  ProductID:19b3d233-1ba1-4abf-958f-588b057bcea2-->
+
+<!--PRD App Name:RoomReservationSystem
+PRD Title:Room Reservation System
+PRD  ProductID:19b3d233-1ba1-4abf-958f-588b057bcea9-->
+
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
+     Name="RoomReservationSystemUAT"
+     ProductID="{19b3d233-1ba1-4abf-958f-588b057bcea2}"
+     Version="1.0.1.8"
+     SharePointMinVersion="16.0.0.0"
+>
+  <Properties>
+    <Title>Room Reservation System</Title>
+    <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
+  </Properties>
+
+  <AppPrincipal>
+    <Internal />
+  </AppPrincipal>
+  <AppPermissionRequests>
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Write" />
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Read" />
+    <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="Read" />
+    <!--<AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web/list" Right="FullControl" />-->
+    <!--<AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="Read" />-->
+  </AppPermissionRequests>
+</App>

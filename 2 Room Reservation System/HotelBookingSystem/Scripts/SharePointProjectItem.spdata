@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
+    <ProjectItemFile Source="App.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.min.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.intellisense.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="kendo.all.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="Booking.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="Default.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="version.json" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="errors.json" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-route.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-route.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-route.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\app.controller.js" Target="Scripts\App\components\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\app.module.js" Target="Scripts\App\components\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\app.route.js" Target="Scripts\App\components\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\adminPage\adminPage.html" Target="Scripts\App\components\adminPage\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\adminPage\adminPageCtrl.js" Target="Scripts\App\components\adminPage\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\hotelRequestForm\hotelRequestFormCtrl.js" Target="Scripts\App\components\hotelRequestForm\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\hotelRequestForm\hotelRequestFormSvc.js" Target="Scripts\App\components\hotelRequestForm\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\hotelRequestForm\hotelRequestFrom.html" Target="Scripts\App\components\hotelRequestForm\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\reportPage\reportPage.html" Target="Scripts\App\components\reportPage\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\reportPage\reportPageCtrl.js" Target="Scripts\App\components\reportPage\" Type="ElementFile" />
+    <ProjectItemFile Source="App\shared\base.service.js" Target="Scripts\App\shared\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\app.service.js" Target="Scripts\App\components\" Type="ElementFile" />
+    <ProjectItemFile Source="App\shared\HBSLang.js" Target="Scripts\App\shared\" Type="ElementFile" />
+    <ProjectItemFile Source="App\shared\requestCSR.js" Target="Scripts\App\shared\" Type="ElementFile" />
+    <ProjectItemFile Source="App\shared\esq.peoplepicker.js" Target="Scripts\App\shared\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\dormLandingPage\dormLandingPage.html" Target="Scripts\App\components\dormLandingPage\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\dormLandingPage\dormLandingPageCtrl.js" Target="Scripts\App\components\dormLandingPage\" Type="ElementFile" />
+    <ProjectItemFile Source="App\components\dormLandingPage\dormLandingPageSrv.js" Target="Scripts\App\components\dormLandingPage\" Type="ElementFile" />
+    <ProjectItemFile Source="underscore-min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="App\shared\jsUpLoad.js" Target="Scripts\App\shared\" Type="ElementFile" />
+    <ProjectItemFile Source="App\shared\date.js" Target="Scripts\App\shared\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.min.js" Target="Scripts\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

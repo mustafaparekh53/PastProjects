@@ -1,0 +1,198 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.contactForm {
+  .container {
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    padding: 2px 20px;
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+    min-height: 72px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .test {
+    color: red;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .toolsrow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .leftpanel {
+    order: 0;
+  }
+
+  .rightpanel {
+    order: 1;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
+
+:global {
+  .ms-TextField-field {
+    height: 24px;
+    line-height: 24px;
+  }
+
+  .ms-Dialog-main {
+    width: 900px;
+    height: 520px;
+    overflow: hidden;
+  }
+
+  .ms-Dropdown-title {
+    height: 24px;
+  }
+
+  .ms-TextField-fieldGroup,
+    {
+    min-height: 25px;
+  }
+
+  .ms-TextField-wrapper .ms-TextField-fieldGroup {
+    height: 25px;
+  }
+
+  .ms-Dropdown-title,
+  .ms-TextField-field,
+  .ms-TextField-fieldGroup {
+    font-size: 12px;
+    border-left: none;
+    border-top: #fff 0px;
+    border-right: #fff 0px;
+  }
+
+  .ms-compositeHeader {
+    display: none !important;
+  }
+
+  .footerbtns {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .errmMessage {
+    font-size: 12px;
+    font-weight: 400;
+    color: #a80000;
+  }
+
+  .ms-modalExample-container {
+    width: 730px;
+    height: 521px;
+    /*
+    height: 90vh;
+    width: 70vw;*/
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+
+    .ms-modalExample-header {
+      /* flex: 1 1 auto;*/
+      background: $ms-color-themePrimary;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 0 18px;
+      min-height: 30px;
+
+      .close {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .ms-modalExample-body {
+      flex: 4 4 auto;
+      padding: 5px 28px;
+      overflow-y: auto;
+    }
+
+    .ms-Grid-col {
+      @include ms-Grid-col;
+      min-height: 62px;
+    }
+
+    .ms-Label {
+      display: block;
+      padding: 5px 0;
+    }
+
+    .ms-TextField-field,
+    .ms-TextField-fieldGroup {
+      font-size: 12px;
+      border-left: none;
+      border-top: #fff 0px;
+      border-right: #fff 0px;
+      height: 24px;
+      line-height: 24px;
+    }
+  }
+}

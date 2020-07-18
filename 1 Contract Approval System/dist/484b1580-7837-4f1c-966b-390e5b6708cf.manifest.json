@@ -1,0 +1,64 @@
+{
+  "id": "484b1580-7837-4f1c-966b-390e5b6708cf",
+  "alias": "ContractListWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Other"
+      },
+      "title": {
+        "default": "ContractList"
+      },
+      "description": {
+        "default": "ContractList description"
+      },
+      "officeFabricIconFontName": "Page",
+      "properties": {
+        "description": "ContractList"
+      }
+    }
+  ],
+  "loaderConfig": {
+    "entryModuleId": "contract-list-web-part",
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/"
+    ],
+    "scriptResources": {
+      "contract-list-web-part": {
+        "type": "path",
+        "path": "dist/contract-list-web-part.js"
+      },
+      "ContractListWebPartStrings": {
+        "defaultPath": "lib/webparts/contractList/loc/en-us.js",
+        "type": "localizedPath"
+      },
+      "react": {
+        "type": "component",
+        "version": "15.6.2",
+        "id": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+        "failoverPath": "node_modules/react/dist/react.js"
+      },
+      "react-dom": {
+        "type": "component",
+        "version": "15.6.2",
+        "id": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+        "failoverPath": "node_modules/react-dom/dist/react-dom.js"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "version": "1.4.1",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b"
+      },
+      "@microsoft/sp-webpart-base": {
+        "type": "component",
+        "version": "1.4.1",
+        "id": "974a7777-0990-4136-8fa6-95d80114c2e0"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.tbhistory {
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  .tbhistory tbody tr td {
+    padding: 8px 12px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #fff;
+    table-layout: fixed;
+  }
+  th,
+  td {
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    padding: 5px 15px;
+  }
+  th {
+    font-weight: bold;
+    background: #ccc;
+  }
+  td.title {
+    background: #efefef;
+  }
+  td.tdUserName {
+    font-size: 10px;
+  }
+  .descCont img {
+    max-width: 100%;
+  }
+}
+
+:global {
+  .ms-compositeHeader {
+    display: none !important;
+  }
+  .descCont img {
+    max-width: 100%;
+  }
+}

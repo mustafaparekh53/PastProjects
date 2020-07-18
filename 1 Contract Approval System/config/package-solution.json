@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "contract-approval-system-client-side-solution",
+    "id": "642a453d-2040-4206-ab92-e03adb058a1d",
+    "version": "1.0.0.28",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/contract-approval-system.sppkg"
+  }
+}

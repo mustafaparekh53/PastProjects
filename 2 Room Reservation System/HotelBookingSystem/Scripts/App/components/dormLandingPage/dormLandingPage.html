@@ -1,0 +1,121 @@
+﻿<div id="dormBookingFilter">
+    <!--
+    <h2>Dorm Booking</h2>
+    -->
+    <input id="adminAllFactoryCode" kendo-drop-down-list k-options="adminAllFactoryCode" k-data-text-field="'Title'" k-data-value-field="'ID'" style="width:120px;" /> &nbsp;
+    <input id="accommodationTypes" kendo-drop-down-list k-options="accommodationTypes" k-data-text-field="'text'" k-data-value-field="'value'" style="width:85px;" ng-model="accTypeCode" /> &nbsp;
+    <input id="dormOrHotel" kendo-drop-down-list k-options="dormOrHotel" k-data-text-field="'Title'" k-data-value-field="'ID'" style="width:120px;" />
+    <span>
+        <a href="javascript:void(0)" ng-click="periodSelect.prev()">&lt;</a>
+        {{periodSelect.label}}
+        <a href="javascript:void(0)" ng-click="periodSelect.next()">&gt;</a>
+    </span>
+    <span style="float:right;">
+        <a kendo-button id="updateEmailBtn" ng-click="updateEmail()" bind-lang="DB_Btn_UpdateEmail">Update Email</a>
+        <a kendo-button id="emailLogBtn" ng-click="emailLogList()" bind-lang="DB_Btn_EmailLog">Email Log</a>
+        <a kendo-button id="unporcessedGuestBtn" ng-click="popupUnproList()"><span bind-lang="DB_Btn_UnprocessedGuest">Unprocessed Guest</span><span id="unprocessNum" style="color: red; font-weight:bold"></span></a>
+        <a kendo-button ng-click="setPeriodDis('week')" bind-lang="DB_Btn_Week">Week</a>
+        <a kendo-button ng-click="setPeriodDis('month')" bind-lang="DB_Btn_Month">Month</a>
+    </span>
+</div>
+<div id="dormBookingTable" style="word-break: break-all; word-wrap: break-word; overflow: auto;"></div>
+
+<div id="dormBookingTable2"></div>
+
+<div id="popupUnprocessedGuestWindow" kendo-window="popupUnprocessedGuestWindow" k-width="600" k-visible="false" k-modal="true">
+    <div id="unprocessedGuest"></div>
+</div>
+<div id="popupDormWindow" kendo-window="popupDormWindow" k-width="1027" k-visible="false" k-modal="true">
+    <a id="popupDormWinClear" kendo-button style="float: right;margin-right: 17px;margin-bottom:5px;" bind-lang="DB_DormHotelAlloc_Clear">Clear</a>
+    <div id="unAllocDormUser">
+        <div id='unAllocDormUserTableHead' style='width:1000px;padding-right:17px;'>
+            <table style='width:1000px;border-collapse:collapse;'>
+                <colgroup>
+                    <col style='width: 55px;'>
+                    <col style='width: 160px;'>
+                    <col style='width: 80px;'>
+                    <col style='width: 160px;'>
+                    <col style='width: 160px;'>
+                    <col style='width: 160px;'>
+                    <col style='width: 80px;'>
+                    <col style='width: 135px;'>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td style='width: 55px;' bind-lang="DB_DormHotelAlloc_Selected">Selected</td>
+                        <td style='width: 160px;' bind-lang="DB_DormHotelAlloc_Name">Name</tdstyle>
+                        <td style='width: 80px;' bind-lang="DB_UnprocessedGuest_Gender">Gender</td>
+                        <td style='width: 160px;' bind-lang="DB_DormHotelAlloc_Department">Department</td>
+                        <td style='width: 160px;' bind-lang="DB_DormHotelAlloc_Title">Title</td>
+                        <td style='width: 160px;' bind-lang="DB_DormHotelAlloc_CheckInOut">CheckInOut</td>
+                        <td style='width: 80px;word-wrap:break-word;' bind-lang="DB_DormHotelAlloc_DaysRemain">DaysRemain</td>
+                        <td style='width: 135px;' bind-lang="DB_DormHotelAlloc_Remarks">Remarks</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id='unAllocDormUserTableBody' style='width:1017px; height:400px;overflow-y:scroll;'>
+            <table style='width:1000px;' cellspacing='0'>
+                <colgroup>
+                    <col style='width: 55px;margin-left:1px;margin-right:1px;'>
+                    <col style='width: 160px;margin-right:1px;'>
+                    <col style='width: 80px;margin-right:1px;'>
+                    <col style='width: 160px;margin-right:1px;'>
+                    <col style='width: 160px;margin-right:1px;'>
+                    <col style='width: 160px;margin-right:1px;'>
+                    <col style='width: 80px;margin-right:1px;'>
+                    <col style='width: 135px;margin-right:1px;'>
+                </colgroup>
+                <tbody>
+                    <tr ng-repeat="val in unAllocDormUser">
+                        <td style='width: 55px;margin-left:1px;margin-right:1px;'>
+                            <input type='checkbox' ng-click="allocation(val)" ng-hide="isSelectUser" />
+                        </td>
+                        <td ng-style="{color:val.color}" ng-click="popupGuestFile(val.UserObj)" style='width: 160px;word-break:break-all; word-wrap:break-word;margin-right:1px;'>{{val.OfficeName}}</td>
+                        <td style='width: 80px;margin-right:1px;'>{{val.Gender}}</td>
+                        <td style='width: 160px;word-wrap:break-word;margin-right:1px;'>{{val.BookingDetailsID.DepartmentName}}</td>
+                        <td style='width: 160px;word-wrap:break-word;margin-right:1px;'>{{val.BookingDetailsID.StaffTitle}}</td>
+                        <td style='width: 160px;'>
+                            {{val.BookingDetailsID.CheckinDate | date:"M/dd"}} to {{val.BookingDetailsID.CheckoutDate | date:"M/dd"}}
+                        </td>
+                        <td style='width: 80px;margin-right:1px;'>{{val.BookingDetailsID.RemainDays}}</td>
+                        <td style='width: 135px;word-wrap:break-word;margin-right:1px;'>{{val.BookingDetailsID.Remarks}}</td>
+                    </tr>
+                    <tr>
+                        <td style='width: 1000px;' colspan="6" bind-lang="DB_Nodata" ng-hide="isHasData">DB_Nodata</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="popupmessageWindow" kendo-window="popupHotelWindow" k-width="600" k-visible="false" k-modal="true">
+    <div id="message">
+
+    </div>
+</div>
+<div id="popupEmailLogWindow" kendo-window="popupEmailLogWindow" k-height="430" k-width="605" k-visible="false" k-modal="true">
+    <div id="emailLogTable"></div>
+</div>
+
+<div id="emalTemp" style="display: none">
+    <table style=" font-family: verdana,arial,sans-serif; font-size: 11px; color: #333333; border-width: 1px; border-color: #a9c6c9; border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <td style=' border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle'>Name<br />姓名</td>
+                <td style=" border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle">Check-In Date<br />入住日期</td>
+                <td style=" border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle">Check-Out Date<br />退房日期</td>
+                <td style=" border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle">Pick Up Time<br />领取钥匙时间</td>
+                <td style="border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle">Location<br />位置</td>
+                <td style=" border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle">Address<br />地址</td>
+                <td style=" border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle">Duty calls<br />值班电话</td>
+                <td style=" border-width: 1px; padding: 4px; border-style: solid; border-color: black; text-align: left; vertical-align: middle">Room Policy<br />入住须知</td>
+            </tr>
+        </thead>
+        <tbody id="emailTempData"></tbody>
+    </table>
+</div>
+
+<div id="popupGuestFileWindow" kendo-window="popupGuestFileWindow" k-width="570" k-visible="false" k-modal="true">
+    <div id="guestFile"></div>
+</div>

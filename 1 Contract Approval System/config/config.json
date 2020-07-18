@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "contact-form-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/contractForm/ContractFormWebPart.js",
+          "manifest": "./src/webparts/contractForm/ContractFormWebPart.manifest.json"
+        }
+      ]
+    },
+    "contract-list-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/contractList/ContractListWebPart.js",
+          "manifest": "./src/webparts/contractList/ContractListWebPart.manifest.json"
+        }
+      ]
+    },
+    "contract-audit-list-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/contractAuditList/ContractAuditListWebPart.js",
+          "manifest": "./src/webparts/contractAuditList/ContractAuditListWebPart.manifest.json"
+        }
+      ]
+    },
+    "approval-form-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/approvalForm/ApprovalFormWebPart.js",
+          "manifest": "./src/webparts/approvalForm/ApprovalFormWebPart.manifest.json"
+        }
+      ]
+    },
+    "deploy-contract-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/deployContract/DeployContractWebPart.js",
+          "manifest": "./src/webparts/deployContract/DeployContractWebPart.manifest.json"
+        }
+      ]
+    },
+    "all-contracts-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/allContracts/AllContractsWebPart.js",
+          "manifest": "./src/webparts/allContracts/AllContractsWebPart.manifest.json"
+        }
+      ]
+    },
+    "staff-dept-form-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/staffDeptForm/StaffDeptFormWebPart.js",
+          "manifest": "./src/webparts/staffDeptForm/StaffDeptFormWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ContractFormWebPartStrings": "lib/webparts/contractForm/loc/{locale}.js",
+    "ContractListWebPartStrings": "lib/webparts/contractList/loc/{locale}.js",
+    "ContractAuditListWebPartStrings": "lib/webparts/contractAuditList/loc/{locale}.js",
+    "ApprovalFormWebPartStrings": "lib/webparts/approvalForm/loc/{locale}.js",
+    "DeployContractWebPartStrings": "lib/webparts/deployContract/loc/{locale}.js",
+    "AllContractsWebPartStrings": "lib/webparts/allContracts/loc/{locale}.js",
+    "StaffDeptFormWebPartStrings": "lib/webparts/staffDeptForm/loc/{locale}.js"
+  }
+}

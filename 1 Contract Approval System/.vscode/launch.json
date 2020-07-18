@@ -1,0 +1,100 @@
+{
+  /**
+   * Install Chrome Debugger Extension for Visual Studio Code to debug your components with the
+   * Chrome browser: https://aka.ms/spfx-debugger-extensions
+   */
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Local workbench",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://localhost:4321/temp/workbench.html",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9222"]
+    },
+    {
+      "name": "Hosted workbench",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://esquel.sharepoint.com/sites/uxp_dev/cps/_layouts/workbench.aspx",
+      // "url": "https://esquel.sharepoint.com/sites/cas-uat2/_layouts/workbench.aspx",
+      //"url": "https://esquel.sharepoint.com/sites/uxp_sit/cas/_layouts/workbench.aspx",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9222", "-incognito"]
+    },
+    {
+      "name": "UAT Waiting for Approval",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://esquel.sharepoint.com/sites/cas-uat2/SitePages/inapprovallist.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9222", "-incognito"]
+    },
+    {
+      "name": "UAT staffdept.aspx",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://esquel.sharepoint.com/sites/cas-uat2/SitePages/staffdept.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9222", "-incognito"]
+    },
+    {
+      "name": "UAT allcontracts.aspx",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://esquel.sharepoint.com/sites/cas-uat2/SitePages/allcontracts.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9222", "-incognito"]
+    },
+    {
+      "name": "UAT inapprovallist.aspx",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://esquel.sharepoint.com/sites/cas-uat2/SitePages/inapprovallist.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9222", "-incognito"]
+    }
+  ]
+}

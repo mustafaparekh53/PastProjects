@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/components/officeUiFabricPeoplePicker/models/index.ts"],"names":[],"mappings":"AAAA,cAAc,8BAA8B,CAAC","file":"components/officeUiFabricPeoplePicker/models/index.js","sourcesContent":["export * from \"./OfficeUiFabricPeoplePicker\";\r\n"],"sourceRoot":"..\\..\\..\\..\\src"}

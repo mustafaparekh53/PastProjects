@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91A0FA83-5CE4-4E42-A622-192B30BC2631}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelBookingSystem</RootNamespace>
+    <AssemblyName>HotelBookingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{fe4222c0-84bd-41cd-afe3-60e19f77f58d}</AppFeaturePartId>
+    <WspPartId>{6eadcc8f-2b29-4d64-ad43-aebecaf9e4a4}</WspPartId>
+    <WorkflowPartId>{4a16fa15-0211-4662-9882-60624b654aad}</WorkflowPartId>
+    <CspkgPartId>{5ab6b221-1478-41e2-a40e-57d4c1f5885f}</CspkgPartId>
+    <SqlPackagePartId>{3e442de3-9620-4f1a-8904-d5dab126f6be}</SqlPackagePartId>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{19b3d233-1ba1-4abf-958f-588b057bcea9}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Default\sprite.png" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\kendo.common.min.css" />
+    <Content Include="Content\kendo.default.min.css" />
+    <Content Include="Images\form-icon-info.png" />
+    <Content Include="Images\room_reservation_logo.png" />
+    <Content Include="Pages\Booking.aspx" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="Scripts\angular-route.min.js.map" />
+    <None Include="Scripts\errors.json" />
+    <None Include="Scripts\version.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\angular.min.js.map" />
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3e442de3-9620-4f1a-8904-d5dab126f6be}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\App\components\adminPage\adminPage.html" />
+    <Content Include="Scripts\App\components\adminPage\adminPageCtrl.js" />
+    <Content Include="Scripts\App\components\app.controller.js" />
+    <Content Include="Scripts\App\components\app.module.js" />
+    <Content Include="Scripts\App\components\app.route.js" />
+    <Content Include="Scripts\App\components\app.service.js" />
+    <Content Include="Scripts\App\components\dormLandingPage\dormLandingPage.html" />
+    <Content Include="Scripts\App\components\dormLandingPage\dormLandingPageCtrl.js" />
+    <Content Include="Scripts\App\components\dormLandingPage\dormLandingPageSrv.js" />
+    <Content Include="Scripts\App\components\hotelRequestForm\hotelRequestFormCtrl.js" />
+    <Content Include="Scripts\App\components\hotelRequestForm\hotelRequestFormSvc.js" />
+    <Content Include="Scripts\App\components\hotelRequestForm\hotelRequestFrom.html" />
+    <Content Include="Scripts\App\components\reportPage\reportPage.html" />
+    <Content Include="Scripts\App\components\reportPage\reportPageCtrl.js" />
+    <Content Include="Scripts\App\shared\base.service.js" />
+    <Content Include="Scripts\App\shared\date.js" />
+    <Content Include="Scripts\App\shared\esq.peoplepicker.js" />
+    <Content Include="Scripts\App\shared\HBSLang.js" />
+    <Content Include="Scripts\App\shared\jsUpLoad.js" />
+    <Content Include="Scripts\App\shared\requestCSR.js" />
+    <Content Include="Scripts\Booking.js" />
+    <Content Include="Scripts\Default.js" />
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\App.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\kendo.all.min.js" />
+    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8ca9b89f-35ba-4b3b-8b09-0197ef0c4d27}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{efd26d15-d281-42c1-9a38-1962aeb93eec}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{d1529748-b410-4ed9-96a3-60c98b29bb36}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{c91176f2-ce55-4391-be74-132865e24d52}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

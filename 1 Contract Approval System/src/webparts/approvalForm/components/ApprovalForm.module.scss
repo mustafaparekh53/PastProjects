@@ -1,0 +1,140 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+.approvalForm {
+  .container {
+    max-width: 900px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    .mslable {
+      font-weight: 600;
+    }
+  }
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+  .mstbheader {
+    background: $ms-color-themePrimary;
+    color: #fff; // display: flex;
+    align-items: center; // @include ms-font-xxl;
+    @include ms-fontWeight-semibold;
+    line-height: 40px;
+    min-height: 40px;
+  }
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px; // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white; // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
+
+:global {
+  div[data-automation-id=pageHeader] {
+    display: none;
+  }
+  .ms-compositeHeader {
+    display: none !important;
+  }
+  .ms-modalExample-container {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    .ms-modalExample-header {
+      /* flex: 1 1 auto;*/
+      background: $ms-color-themePrimary;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      @include ms-font-xxl;
+      @include ms-fontWeight-semibold;
+      padding: 0 28px;
+      min-height: 40px;
+      .close {
+        position: absolute;
+        right: 0;
+      }
+    }
+    .ms-modalExample-body {
+      flex: 4 4 auto;
+      padding: 5px 28px;
+      overflow-y: auto;
+    }
+  }
+  .footerbtns {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-left: 1px solid #888;
+    border-top: 1px solid #888;
+    width: 100%;
+  }
+  .table th,
+  .table td {
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    padding: 5px 15px;
+  }
+  .table th {
+    font-weight: bold;
+    background: #ccc;
+  }
+  .table td.title {
+    background: #efefef;
+  }
+  .my-header-class {
+    font-weight: 600;
+  }
+  .ql-editor {
+    min-height: 150px;
+  }
+}

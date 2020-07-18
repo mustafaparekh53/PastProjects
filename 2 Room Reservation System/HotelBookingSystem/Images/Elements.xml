@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Images">
+    <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\room_reservation_logo.png" Url="Images/room_reservation_logo.png" ReplaceContent="TRUE" />
+    <File Path="Images\form-icon-info.png" Url="Images/form-icon-info.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

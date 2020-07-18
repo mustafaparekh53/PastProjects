@@ -1,0 +1,651 @@
+﻿/* 在下面放置自定义样式 */
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('fonts/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+input[type=button], input[type=reset], input[type=submit], button {
+    font-size: 20px;
+}
+
+
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-remove:before {
+    content: "\e014";
+}
+
+.labelNormal {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.labelBold {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.headerTitle {
+    width: 25%;
+    font-size: 18pt;
+}
+
+.headerRef {
+    width: 25%;
+}
+
+.inputNormal {
+}
+
+
+.spliter_line_01 {
+    padding: 0 20px 0;
+    margin: 20px 0;
+    line-height: 1px;
+    border-left: 200px solid #ddd;
+    border-right: 200px solid #ddd;
+    text-align: center;
+}
+
+.spliter_line_02 {
+    height: 1px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/*.spliter_line_02 span{
+    position: relative;
+    top: -8px;
+    background: #fff;
+    padding: 0 20px;
+}*/
+
+.spliter_line_03 {
+    width: 600px;
+}
+
+    .spliter_line_03 b {
+        background: #ddd;
+        margin-top: 4px;
+        display: inline-block;
+        width: 180px;
+        height: 1px;
+        _overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .spliter_line_03 span {
+        display: inline-block;
+        width: 220px;
+        vertical-align: middle;
+    }
+
+.bNav {
+    text-align: center;
+    list-style: circle;
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+.esq_BookFrom {
+    background-color: #ffffff;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 3px 3px 3px #888888;
+    /*width: 1180px;*/
+    width: 1150px;
+}
+
+.esq_staff_payment_th {
+    position: relative;
+    top: 14px;
+}
+
+.esq_staff_FactoryCode_td {
+    width: 200px;
+}
+
+.esq_staff_CCPerson_td {
+    width: 215px;
+}
+
+#esq_RequestFrom {
+    margin: 20px auto;
+}
+
+.esq_floatR {
+    float: right;
+}
+
+.esq_floatL {
+    float: left;
+}
+
+.esq_language {
+}
+
+.esq_clearFloat {
+    clear: both;
+}
+
+.esq_FormHeader {
+    background-color: #d2d2d2;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+.esq_headerTr {
+    height: 32px;
+}
+
+    .esq_headerTr > div {
+        margin-right: 12px;
+        float: left;
+    }
+
+    .esq_headerTr div > span {
+        display: inline-block;
+    }
+
+.esq_dormHotel {
+    /*margin-bottom:10px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;*/
+}
+
+.esq_SelectHotelSpan {
+    background-color: #8a8a8a;
+    background-image: url("/sites/ead/hbs/SiteAssets/banner.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: #ffffff;
+    height: 38px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.esq_txtShowSmokingFlag {
+    position: absolute;
+    left: 63px;
+}
+
+.esq_SelectHotelSpan h2 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btnRemoveGuestOrStaff {
+    /*font-size:;*/
+}
+
+.esq_span_tips {
+    background-image: url("/sites/ead/SiteAssets/hbs/Default/form-icon-info.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 18px;
+    margin-right: 2px;
+}
+
+.esq_SelectHotel {
+    height: 35px;
+    margin: 10px 0;
+}
+
+    .esq_SelectHotel > div {
+        float: left;
+        margin-right: 10px;
+    }
+
+.esq_SelectHotelPreference {
+    margin-top: 5px;
+}
+
+.esq_SelectHotelRadio {
+    padding-right: 50px;
+}
+
+#emailHotel{
+    float:none;
+    clear:both;
+}
+
+    #emailHotel1 {
+        float:left;
+        margin-bottom:5px;
+        width: 180px;
+        padding-left:85px
+    }
+     #emailHotel2 {
+        float:left;
+        margin-bottom:5px;
+        width: 250px;
+        padding-left:160px
+    }
+     #emailHotel3 {
+        float:left;
+        margin-bottom:5px;
+        width: 250px;
+        padding-left:90px
+    }
+
+.esq_OtherHotelButton{
+    clear:both;
+}
+.esq_EnterOtherHotel_span {
+    font-weight: bold;
+    font-size: 1.46em;
+}
+
+.esq_Room {
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.esq_Room_tempHotel {
+    padding-left: 137px;
+}
+
+.esq_Room_tempDorm {
+    padding-left: 0px;
+}
+
+.esq_Room > div {
+    float: left;
+}
+
+.esq_Room_number {
+    left: 0px;
+    width: 50px;
+    background-color: #ddd;
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid #ddd;
+}
+
+    .esq_Room_number span {
+        position: absolute;
+        top: 46%;
+        left: 10px;
+        background-image: url("/sites/ead/SiteAssets/hbs/Default/form-icon-minR.png");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 29px;
+        text-indent: 21px;
+        padding-top: 10px;
+    }
+
+.esq_Room_add {
+    position: absolute;
+    bottom: 5px;
+    left: 67px;
+}
+
+.esq_Room_add_button {
+    min-width: 30px;
+    padding: 2px;
+}
+
+.esq_staff_Rooms_Span {
+}
+
+.esq_btnAddRoom_Div {
+    background-image: url("/sites/ead/SiteAssets/hbs/Default/form-icon-addR.png");
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.esq_room_staff_minus {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    background-image: url("/sites/ead/SiteAssets/hbs/Default/form-icon-minP.png");
+    background-position-x: 11px;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+
+.esq_Room_add_button_th {
+    background-image: url('/sites/ead/SiteAssets/hbs/Default/form-icon-addP.png');
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.esq_room_staff_minus input {
+    min-width: 30px;
+    padding: 2px;
+}
+
+.esq_room_div {
+    min-height: 125px;
+    width: 100%;
+}
+
+.esq_room_staff {
+    position: relative;
+    padding-top: 10px;
+}
+
+.esq_room_staff_tempHotel {
+    padding-left: 50px;
+}
+
+.esq_room_staff_tempDorm {
+    padding-left: 50px;
+}
+
+.esq_Room_Staff_Row {
+    height: 22px;
+}
+
+    .esq_Room_Staff_Row > div {
+        margin-right: 8px;
+        float: left;
+    }
+
+.esq_HotelBody {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.esq_OtherHotelRow {
+    height: 30px;
+}
+
+    .esq_OtherHotelRow > div {
+        float: left;
+    }
+
+#esq_StaffAndGuestHeader {
+    background-color: #8a8a8a;
+    background-image: url("/sites/ead/hbs/SiteAssets/banner.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: #ffffff;
+    height: 38px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+    #esq_StaffAndGuestHeader h2 {
+        color: #ffffff;
+    }
+
+    #esq_StaffAndGuestHeader div {
+        float: left;
+        margin-right: 24px;
+    }
+
+.esq_room_div > div {
+    border-bottom: 1px solid #ababab;
+}
+
+.esq_hotelPrice > div {
+    background-color: #464646;
+    color: #ffffff;
+    float: left;
+    height: 40px;
+    width: 80px;
+    border: 1px solid #ddd;
+    margin-left: 6px;
+    padding: 0 5px;
+}
+
+.esq_adminDiv, .esq_adminRemarks {
+    border-bottom: 1px solid #ddd;
+}
+
+    .esq_adminDiv span, .esq_adminRemarks span {
+        font-weight: bold;
+    }
+
+    .esq_adminDiv > div, .esq_adminRemarks > div {
+        margin: 10px 0;
+    }
+
+    .esq_adminDiv input[type=button], .esq_adminRemarks input[type=button] {
+        margin: 0px;
+        width: 200px;
+    }
+
+.esq_FormFoot {
+    margin-top: 10px;
+}
+
+
+#dormBookingTable td {
+    padding: 5px;
+}
+
+#dormBookingTable table thead td {
+    background-color: #F5F5F5;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#dormBookingTable table thead > tr > td:first-child {
+    border-left: 1px solid #ccc;
+}
+
+#dormBookingTable table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+#dormBookingTable table tbody tr td:nth-child(n+1) {
+    width: 150px;
+    overflow: hidden;
+}
+
+/** Dorm Alloction */
+#dormBookingFilter {
+    margin: 10px 20px 20px;
+}
+
+/* --------------- dorm booking css start ---------- */
+#dormBookingTable td {
+    padding: 5px;
+}
+
+#dormBookingTable table {
+    width: 100%;
+}
+
+#dormBookingTable table thead td {
+    background-color: #F5F5F5;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#dormBookingTable table thead > tr > td:first-child {
+    border-left: 1px solid #ccc;
+}
+
+#dormBookingTable table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+#dormBookingTable table tbody tr td:nth-child(n+1) {
+    width: 150px;
+    overflow: hidden;
+}
+
+.dormOrHotelCell {
+    cursor: pointer;
+}
+
+.dormOrHotelCell:hover {
+    background-color: yellow;
+    text-decoration: underline;
+}
+/* --------------- dorm booking css end ---------- */
+/* --------------- unprocessed Guest css start ---------- */
+#unprocessedGuest td {
+    padding: 5px;
+}
+
+#unprocessedGuest table {
+    width: 100%;
+}
+
+#unprocessedGuest table thead td {
+    background-color: #F5F5F5;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#unprocessedGuest table thead > tr > td:first-child {
+    border-left: 1px solid #ccc;
+}
+/* --------------- unprocessed Guest css end ---------- */
+#popupDormWindow table {
+    width: 100%;
+}
+
+#unAllocDormUser,
+#unHotelAllocDormUser,
+#emailLogTable {
+    display: block;
+}
+
+#unAllocDormUser > table,
+#unHotelAllocDormUser > table,
+#emailLogTable > table {
+    width: 100%;
+}
+
+#unAllocDormUser table thead td,
+#unHotelAllocDormUser table thead td,
+#emailLogTable table thead td {
+    background-color: #F5F5F5;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#unAllocDormUser table thead > tr > td:first-child,
+#unHotelAllocDormUser table thead > tr > td:first-child,
+#emailLogTable table thead > tr > td:first-child {
+    border-left: 1px solid #ccc;
+}
+
+#dormBookingTable table > thead > tr > td {
+    text-align: center;
+}
+
+.hotelAllocList-td {
+    vertical-align: top;
+}
+
+.hotelAllocList-td > ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.hotel_alloc_btn {
+    margin: 0px 3px;
+    min-width: inherit !important;
+    padding: inherit !important;
+}
+
+.esq_dialog_img, .esq_dialog_msg {
+    float: left;
+}
+
+.esq_dialog_img img {
+    width: 50px;
+}
+
+.esq_dialog_msg {
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 400px;
+}
+
+.esq_dialog_btn {
+    clear: both;
+}
+
+#esq_dialog_close {
+    float: right;
+}
+
+/* --------------- CCManager css begin ---------- */
+
+#txtCCManager input.editable, #txtCCManager2 input.editable {
+    background: #CCC;
+    border: 1px solid red;
+    margin: 0;
+    padding: 1px 3px;
+    vertical-align: middle;
+}
+
+#txtCCManager table.stats, #txtCCManager2 table.stats {
+    text-align: center;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    color: #fff;
+    width: 710px;
+    background-color: #666;
+    border: 0px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+#txtCCManager table.stats td, #txtCCManager2 table.stats td {
+    background-color: #CCC;
+    color: #000;
+    padding: 4px;
+    text-align: left;
+    border: 1px #fff solid;
+}
+
+/* --------------- CCManager css end ---------- */
+
+/* --------------- guestFile css start ---------- */
+#guestFile td {
+    padding: 5px;
+}
+
+#guestFile table {
+    width: 100%;
+}
+
+#guestFile table thead td {
+    background-color: #F5F5F5;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#guestFile table thead > tr > td:first-child {
+    border-left: 1px solid #ccc;
+}
+/* --------------- guestFile css end ---------- */
+
+.userImg{
+    height:200px;
+}
