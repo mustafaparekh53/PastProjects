@@ -21,6 +21,19 @@
 
 **Contributions/Ownership:** 100% mine
 
+## 2) Room Reservation System
+
+**Project Description:** An internal hotel booking system for Esquel group with a workforce of 58,000 people spread across 8 countries.
+
+Added functionalities to this intranet application and went through the whole development cycle. 
+
+---
+
+**Demo:**
+
+![Screen Grabs](https://github.com/mustafaparekh53/PastProjects/blob/master/2%20Room%20Reservation%20System/docs/imgs/GoToSiteContents.png)
+![Screen Grabs](https://github.com/mustafaparekh53/PastProjects/blob/master/2%20Room%20Reservation%20System/docs/imgs/GoToSiteSettings.png)
+
 ## 4) CityHack website
 
 **Project Description:** An event website for City University's Hackathon
