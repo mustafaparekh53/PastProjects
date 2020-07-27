@@ -1,3 +1,5 @@
+# Past Projects
+
 ## 3) Flightright Analytic Dashboards
 
 **Project Description:** This portal allows to visualize and analyse the data collected from the digital Flightright website. Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and devoted approximately 2 months to this project.
@@ -18,3 +20,16 @@
 
 **Contributions/Ownership:** 100% mine
 
+## 4) CityHack website
+
+**Project Description:** An event website for City University's Hackathon
+
+Did **[end-to-end development](http://www.rapidsofttechnologies.com/end-to-end-website-development.php)** and developed this website in about 2 weeks along with 2 other developers.
+
+---
+
+**Demo:**
+
+![Screen Recording](https://github.com/mustafaparekh53/PastProjects/blob/master/4%20CityHack/Screen%20Recording%202020-02-15%20at%203.29.50%20AM.gif)
+
+*YouTube: https://youtu.be/5l9whGfTfF4*
